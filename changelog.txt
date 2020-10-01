@@ -1,0 +1,78 @@
+1.1.)
+-Ajout de joueur, gravité et deplacements.
+-Ajout de rectangle de sol, pas de collisions fonctionelles.
+-Ajout de collisions avec les bors de l'écran.
+-Ajout de possibilité de quitter le jeu.
+-Tentative d'orienté objet via la classe tourelles.
+
+1.2.)
+-Supression du sol.
+-Tentative de fonction pour ajouter des tubes au tableau de la classe.
+-Bug avec les collisions, on se sert d'une fonction prise sur internet.
+
+1.3.)
+-Supression de l'orienté objet, tout est fait globalement.
+-Ajout de collisions avec les tubes, possibilité de mourir en les touchants.
+-Il faut appuyer sur gauche et droite pour faire spawn un tube.
+-Ajout de coolDown de temps entre chaque tube.
+
+1.4.)
+-Ajout d'un label de score, qui s'incrémente à chaque tube traversé.
+
+1.5.)
+-Bricolage avec la librairie pygame-menu, afin de faire un menu sans se
+prendre la tête, rien ne marche.
+
+1.6.)
+-Abandon de l'horreur qu'est pygame-menu, j'enterre cette sombre histoire
+et je crache dessus. J'enverrai mes enfants uriner sur la tombe du dévelopeur
+pour m'avoir fait perdre 6 heures de ma vie la dessus.
+-Ajout d'un menu via un code pris en ligne, ne se servant uniquement de pygame.
+
+1.7.)
+-Configuration du menu pour qu'il aie du sens dans notre jeu.
+
+1.8.)
+-Cauchemar avec les variables locales, Python est très bizzare à ce sujet, si on déclare une
+variable globale en dehors d'une fonction et qu'on la réassigne dans la fonction, Python crée
+une nouvelle variable locale et plus rien n'a de sens. Il faut donc déclarer ces variables comme
+globales dans la fonction si on les modifie, sinon rien ne marche.
+-Nettoyage de code, la fonction colliderect fonctionne à nouveau, donc je peux me débarasser du code
+que j'avais pris en ligne.
+-Optimisation et nettoyage de lignes redondantes.
+
+1.9.)
+-Début de l'expérimentation avec les scores.
+-L'API google sheets et drive marche et est activé
+(cf. dossier -> scores_test pour le code)
+-Mr.Gisin nous à reccomandé d'encapsuler nos variables dans un objet global
+plutôt que de les déclarer globales individuellement à chaque fois.
+
+1.10.)
+-Le score et le nom de l'utilisateur sont maintenant enregistrés dans une variable
+et écrits dans la base de données du drive lors de la mort.
+-Le code gérant cela est stocké dans le fichier "scores.py" qui contient toute l'interaction
+avec la base de données, voici le tutoriel sur lequel je me suis basé: https://www.youtube.com/watch?v=vISRn5qFrkM
+-La librairie pygame text input m'a permis de créer une boite de texte, ce qui est ce
+que j'utilise pour lire ce que l'utilisateur écrit: https://github.com/Nearoo/pygame-text-input
+C'est une simple unit que l'on importe localement.
+-Le tableau des scores n'est pas encore affiché, je dois créer une liste de labels pour
+le faire. Ce sera pour la prochaine version.
+
+1.11.)
+-Les scores ont étés transférés en orienté objet, plus lisible et manipulable. Cela m'évite de rappeler 
+de mêmes procédures quand on recharge les scores après être mort.
+-Un tableau de labels contenant les scores à été rajouté et s'affiche correctement, ça marche.
+
+1.12.)
+-Les scores fonctionnent parfaitement.
+-Début de l'orienté objet pour les tubes.
+ 
+To Do:
+-Encapsuler toutes ces variables, c'est moche. => En cours.
+-Histoire de variables globales doit être résolvable, c'est hideux -
+de déclarer en ligne comme ça => En cours.
+-Faire du réseau multijoueurs => Bientôt.
+-Orienté objet doit être possible pour les tubes, voir avec Gisin. => En cours.
+
+
